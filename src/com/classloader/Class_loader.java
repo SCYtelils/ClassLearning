@@ -67,7 +67,7 @@ public class Class_loader extends ClassLoader{
 //		System.out.println(clazz);
 		Method sayHello = clazz.getDeclaredMethod("sayHello", null);
 		
-		Object obj = clazz.newInstance();
+		Object obj = clazz.newInstance(); //用类加载器调用clazz类的方法，需要实例化clazz类。
 		
 		sayHello.invoke(obj, null);
 		
