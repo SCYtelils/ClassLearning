@@ -24,5 +24,15 @@ public class PersonReflect {
 		//关于构造方法
 		Constructor con_Person = class_Person.getDeclaredConstructor(null);
 		System.out.println(con_Person);
+		
+		//关于父类和接口
+		Class superClass = class_Person.getSuperclass();
+		System.out.println(superClass.getSimpleName());
+		
+		Class[] interfaceClass = class_Person.getInterfaces();
+		for (Class inter : interfaceClass) {
+			System.out.println(inter.getSimpleName());
+		}
+		
 	}
 }
