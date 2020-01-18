@@ -64,8 +64,14 @@ public class Class_loader extends ClassLoader{
 		Class_loader cl = new Class_loader();
 		Class clazz = cl.loadClass("E:\\王老师\\王老师  四大神器\\Java四大神器——王老师\\ClassLeaner\\bin\\com\\classloader\\ClassForLoader.class");
 		
-		System.out.println(clazz);
+//		System.out.println(clazz);
+		Method sayHello = clazz.getDeclaredMethod("sayHello", null);
 		
+		Object obj = clazz.newInstance();
+		
+		sayHello.invoke(obj, null);
+		
+ 		
 //		Field[] fields = clazz.getDeclaredFields();
 //		System.out.println(fields[1]);
 		
